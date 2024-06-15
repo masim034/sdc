@@ -1,0 +1,99 @@
+import java.util.Scanner;
+
+public class Marksheet{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input from the user
+        System.out.print("Enter student name: ");
+        String studentName = scanner.nextLine();
+
+        System.out.print("Enter total marks: ");
+        double totalMarks = scanner.nextDouble();
+
+        System.out.print("Enter obtained marks: ");
+        double obtainedMarks = scanner.nextDouble();
+
+        // Calculate percentage
+        double percentage = (obtainedMarks / totalMarks) * 100;
+
+        // Calculate grade based on percentage
+        String grade;
+        if (percentage >= 90) {
+            grade = "A+";
+        } else if (percentage >= 80) {
+            grade = "A";
+        } else if (percentage >= 70) {
+            grade = "B";
+        } else if (percentage >= 60) {
+            grade = "C";
+        } else if (percentage >= 50) {
+            grade = "D";
+        } else {
+            grade = "Fail";
+        }
+
+        // Calculate GPA based on grade
+        double gpa;
+        switch (grade) {
+            case "A+":
+                gpa = 4.0;
+                break;
+            case "A":
+                gpa = 4.0;
+                break;
+            case "B":
+                gpa = 3.0;
+                break;
+            case "C":
+                gpa = 2.0;
+                break;
+            case "D":
+                gpa = 1.0;
+                break;
+            default:
+                gpa = 0.0;
+        }
+
+        // Output
+        System.out.println("\nMark Sheet:");
+        System.out.println("Student Name: " + studentName);
+        System.out.println("Total Marks: " + totalMarks);
+        System.out.println("Obtained Marks: " + obtainedMarks);
+        System.out.println("Percentage: " + percentage + "%");
+        System.out.println("Grade: " + grade);
+        System.out.println("GPA: " + gpa);
+
+        // Close the scanner
+        scanner.close();
+    }
+}
+----------------------------------------------------------------------------------------------
+import java.util.Scanner;
+
+public class AddAndSwap {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input from the user
+        System.out.print("Enter first number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = scanner.nextInt();
+
+        // Performing addition
+        int sum = num1 + num2;
+
+        // Swapping values
+        int temp = sum;
+        sum = num1;
+        num1 = temp;
+
+        // Output
+        System.out.println("\nAfter swapping, num1 = " + num1 + " and sum = " + sum);
+
+        // Close the scanner
+        scanner.close();
+    }
+}

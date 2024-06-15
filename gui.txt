@@ -1,0 +1,109 @@
+-----------------------------------------
+import javax.swing.*;
+
+public class Task1 {
+    public static void main(String[] args) {
+        // Create a new frame
+        JFrame frame = new JFrame("Java Swing Lab");
+
+        // Set the default close operation
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Set the size of the frame
+        frame.setSize(400, 200);
+
+        // Center the frame on the screen
+        frame.setLocationRelativeTo(null);
+
+        // Make the frame visible
+        frame.setVisible(true);
+
+        // Display a dialog with the title
+        JOptionPane.showMessageDialog(frame, "This is a Java Swing Lab dialog", "Java Swing Lab", JOptionPane.INFORMATION_MESSAGE);
+    }
+}
+
+----------------------------------------------------------------------------------
+import javax.swing.*;
+import java.awt.*;
+
+public class Task2 {
+    public static void main(String[] args) {
+        // Create a new frame
+        JFrame frame = new JFrame("Registration Page");
+
+        // Set the default close operation
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Set the size of the frame
+        frame.setSize(400, 400);
+
+        // Set the layout of the frame
+        frame.setLayout(new GridLayout(6, 2));
+
+        // Add components to the frame
+        frame.add(new JLabel("First Name:"));
+        frame.add(new JTextField());
+
+        frame.add(new JLabel("Last Name:"));
+        frame.add(new JTextField());
+
+        frame.add(new JLabel("Email:"));
+        frame.add(new JTextField());
+
+        frame.add(new JLabel("Password:"));
+        frame.add(new JPasswordField());
+
+        frame.add(new JLabel("Confirm Password:"));
+        frame.add(new JPasswordField());
+
+        frame.add(new JLabel(""));
+        JButton registerButton = new JButton("Register");
+        frame.add(registerButton);
+
+        // Center the frame on the screen
+        frame.setLocationRelativeTo(null);
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+}
+---------------------------------------------------------------------------------
+import javax.swing.*;
+import java.awt.*;
+
+public class Task3 {
+    public static void main(String[] args) {
+        // Create a new frame
+        JFrame frame = new JFrame("Sample GUI");
+
+        // Set the default close operation
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Set the size of the frame
+        frame.setSize(500, 300);
+
+        // Set the layout of the frame
+        frame.setLayout(new BorderLayout());
+
+        // Add components to the frame
+        JPanel topPanel = new JPanel();
+        topPanel.add(new JLabel("Top Panel"));
+        frame.add(topPanel, BorderLayout.NORTH);
+
+        JPanel centerPanel = new JPanel();
+        centerPanel.add(new JLabel("Center Panel"));
+        frame.add(centerPanel, BorderLayout.CENTER);
+
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.add(new JLabel("Bottom Panel"));
+        frame.add(bottomPanel, BorderLayout.SOUTH);
+
+        // Center the frame on the screen
+        frame.setLocationRelativeTo(null);
+
+        // Make the frame visible
+        frame.setVisible(true);
+    }
+}
+--------------------------------------------------------------------------------------------------
